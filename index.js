@@ -23,7 +23,7 @@ var login =new mongoose.Schema({
 
 const loginup =new mongoose.model('document', login);  // main hai ye dbs ka 
 
-app.post('/signup.html',(req,res)=>{
+app.post('/',(req,res)=>{
     var temp =loginup({
         name: req.body.mail,
         pass: req.body.pass,
@@ -119,7 +119,7 @@ app.get('/login.html',(req,res)=>{
     res.sendfile('login.html');
 })
 
-app.get('/signup.html',(req,res)=>{
+app.get('/',(req,res)=>{
     res.sendfile('signup.html');
 })
 
